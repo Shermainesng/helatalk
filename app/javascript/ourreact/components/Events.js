@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Page from "./Page";
 
-function About() {
-  const title = "About Us"
+function Events() {
+  const title = "Events"
   useEffect(() => {
     document.title = `${title} | Baggu`;
     window.scrollTo(0, 0);
@@ -18,4 +18,4 @@ function About() {
   );
 }
 
-export default About;
+export default Events;
