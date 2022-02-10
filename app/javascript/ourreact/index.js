@@ -15,28 +15,28 @@ import Discover from "./components/Discover";
 
 // Reducers
 
-const reducers = combineReducers({});
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// const middlewares = composeEnhancers(applyMiddleware(reduxPromise));
-// store={createStore(reducers, {}, middlewares)}
+// const reducers = combineReducers({});
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// // const middlewares = composeEnhancers(applyMiddleware(reduxPromise));
+// // store={createStore(reducers, {}, middlewares)}
 function Main() {
   return (
     // <Provider>
-      <BrowserRouter>
-        {/* <FlashMessages messages={state.flashMessages} /> */}
-        <Header />
-        {/* pass the state as props to header to ensure header can still render properly */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/discover" element={<Discover />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+    <BrowserRouter>
+      {/* <FlashMessages messages={state.flashMessages} /> */}
+      <Header />
+      {/* pass the state as props to header to ensure header can still render properly */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/discover" element={<Discover />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
     // </Provider>
   );
 }
 
-ReactDOM.render(<Main/>, document.querySelector("#app"));
+ReactDOM.render(<Main />, document.querySelector("#app"));
