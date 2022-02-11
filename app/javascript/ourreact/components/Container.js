@@ -1,16 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function Container(props) {
-  useEffect(() => {
-    document.title = `${props.title} | React App`;
-    window.scrollTo(0, 0);
-  }, []);
-
+  const classes = `container ${props.classes}`
   return (
-    <>
-      <div className="container">
-      </div>
-    </>
+    <div className={classes}>
+      {props.children}
+    </div>
   );
 }
 

@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 
 // Components
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -24,16 +24,18 @@ function Main() {
     // <Provider>
     <BrowserRouter>
       {/* <FlashMessages messages={state.flashMessages} /> */}
-      <Header />
-      {/* pass the state as props to header to ensure header can still render properly */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/discover" element={<Discover />} />
-      </Routes>
-      <Footer />
+      <div className="container-background">
+        <Navbar />
+        {/* pass the state as props to header to ensure header can still render properly */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blogs />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/discover" element={<Discover />} />
+        </Routes>
+      </div>
+        <Footer />
     </BrowserRouter>
     // </Provider>
   );

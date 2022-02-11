@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Container from "./Container";
 
 function Page(props) {
   useEffect(() => {
@@ -8,9 +7,9 @@ function Page(props) {
   }, []);
 
   return (
-    <>
-      <Container></Container>
-    </>
+    <div className={props.classes}>
+      {props.children}
+    </div>
   );
 }
 

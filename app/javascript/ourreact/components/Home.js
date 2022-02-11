@@ -1,18 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Page from "./Page";
+import Container from "./Container";
 
 function Home() {
   const title = "Home";
-  useEffect(() => {
-    document.title = `${title} | HELA`;
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="container-background d-flex align-items-center justify-content-center flex-column" title={title}>
-      <h1 className="font-white-h1">Your Daily Dose of Sex Positivity</h1>
-      <h3 className="font-white-h3">Join the Community</h3>
-    </div>
+    <Page title={title} classes="d-flex align-items-center py-5">
+      <Container classes="text-center" title={title}>
+        <h1 className="font-white-h2">hela</h1>
+        <h2 className="font-white-h2">Your Daily Dose of Sex Positivity</h2>
+        <h3 className="font-white-h3">Join the Community</h3>
+      </Container>
+    </Page>
   );
 }
 
