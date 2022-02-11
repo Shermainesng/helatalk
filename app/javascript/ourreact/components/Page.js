@@ -9,7 +9,7 @@ function Page(props) {
 
   return (
     <>
-      <Container wide={props.wide}>{props.children}</Container>
+      <Container></Container>
     </>
   );
 }
