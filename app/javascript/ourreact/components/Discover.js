@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Page from "./Page";
 
 function Discover() {
   const title = "Discover"
-  useEffect(() => {
-    document.title = `${title} | Baggu`;
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <Page title={title}>

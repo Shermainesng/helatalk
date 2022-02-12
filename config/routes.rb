@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/blog', to: 'pages#home'
   get '/discover', to: 'pages#home'
   get '/events', to: 'pages#home'
+
+  resources :emails, only: [:new, :create]
 end
