@@ -14,7 +14,7 @@ function Events() {
     navigate("/mailinglist", { state: urlEncoded });
   }
   return (
-    <Page title={title} classes="d-flex align-items-center py-5">
+    <Page id="events" title={title} classes="d-flex align-items-center py-5 vh-100">
       <Container classes="text-center">
         <h1 className="font-white-h2">{title}</h1>
         <h2 className="font-white-h2">We're planning some exciting stuff</h2>

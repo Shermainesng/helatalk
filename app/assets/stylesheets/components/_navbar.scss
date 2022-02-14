@@ -1,12 +1,22 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar-brand {
+  font-family: $loud-font;
+  font-style: italic;
+  color: $hela-blue;
+  font-size: 1.75rem;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.hela-nav-link {
+  color: $hela-white;
+  font-family: $headers-font;
+  text-decoration: none;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+
+  &:hover {
+    color: $hela-blue;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.hela-nav-link.active {
+  color: $hela-blue;
 }

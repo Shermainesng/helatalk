@@ -6,7 +6,11 @@ function Page(props) {
     window.scrollTo(0, 0);
   }, []);
 
-  return <div className={props.classes}>{props.children}</div>;
+  return (
+    <div id={props.id} className={props.classes}>
+      {props.children}
+    </div>
+  );
 }
 
 export default Page;
