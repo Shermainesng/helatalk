@@ -14,3 +14,13 @@ $loud-font: "Anton", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+.font-anton {
+  font-family: $loud-font;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.font-white {
+  color: #FFFFFF;
+}

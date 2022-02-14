@@ -1,5 +1,7 @@
 import React from "react";
 import Page from "./Page";
+import Container from "./Container";
+import CategoryCard from "./CategoryCard";
 
 function Blogs() {
   const title = "blog"
@@ -7,9 +9,14 @@ function Blogs() {
   return (
     <Page id="blog" title={title} classes="vh-100">
       <h2>{title}</h2>
-      <p className="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorum labore quisquam vel id dicta fuga! Ducimus, quo. Dolore commodi aliquid error veritatis consequuntur, excepturi cumque fuga eum incidunt doloremque?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At qui enim rem totam voluptatum. Aut saepe temporibus, facilis ex a iste expedita minima dolorum dicta doloribus libero aliquid, quae maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat suscipit beatae eum, est soluta ducimus ratione et impedit sapiente, nihil, atque dignissimos adipisci? Totam atque officia quis voluptates sed veniam?</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates quisquam possimus tenetur, dicta enim rerum quis, quaerat id nobis provident quo dolorum sapiente temporibus facere non repellendus consequatur cupiditate!</p>
+      <Container classes="d-flex flex-row scroll-horiz w-100">
+        <CategoryCard name="Health" />
+        <CategoryCard name="Kink" />
+        <CategoryCard name="Mental" />
+        <CategoryCard name="Explore" />
+        <CategoryCard name="Others" />
+      </Container>
+
     </Page>
   );
 }
