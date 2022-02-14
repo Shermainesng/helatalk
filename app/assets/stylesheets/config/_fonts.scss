@@ -1,7 +1,10 @@
-// Import Google fonts
+// WorkSans, Nunito
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap");
+// Anton [brand font]
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 // Define fonts for body and headers
+$brand-font: 'Anton', sans-serif;
 $body-font: "Work Sans", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
 
