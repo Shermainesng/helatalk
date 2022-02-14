@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
+// import { Link } from 'react-scroll'
+
+
 
 // Components
 import Navbar from "./components/Navbar";
@@ -19,7 +22,24 @@ import Discover from "./components/Discover";
 // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // // const middlewares = composeEnhancers(applyMiddleware(reduxPromise));
 // // store={createStore(reducers, {}, middlewares)}
+
+function App() {
+  return (
+  <div>
+    <Home />
+    <About />
+    <Blogs />
+    <Events />
+  </div>
+  );
+}
+
+
 function Main() {
+//   function scrollToId(id) {
+//     document.getElementById(id).scrollIntoView();
+//   }
+
   return (
     // <Provider>
     <BrowserRouter>
@@ -28,14 +48,15 @@ function Main() {
         <Navbar />
         {/* pass the state as props to header to ensure header can still render properly */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blogs />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/discover" element={<Discover />} />
+          <Route path="/" element={<App />} />
+          {/* <Route path="#about" element={<App />}/>
+          <Route path="#blog" element={<App />}/> */}
+          {/* <Route path="/events" element={<App />} onEnter={scrollToId("events")} /> */}
+          {/* <Route path="#events" element={<App />}/>
+          // <Route path="/discover" element={<Discover />} /> */}
         </Routes>
-      </div>
         <Footer />
+      </div>
     </BrowserRouter>
     // </Provider>
   );

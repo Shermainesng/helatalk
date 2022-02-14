@@ -1,6 +1,7 @@
 .container-background {
   background: url(backgroundgradient.jpg);
-  height: 100vh;
+  height: 100%;
+  background-attachment: scroll;
 }
 .center-content {
   // margin-top: 15%;
