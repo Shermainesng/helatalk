@@ -6,7 +6,7 @@ function Navbar() {
 
   const getClass = ({ isActive }) => {return isActive ? "hela-nav-link active" : "hela-nav-link"};
   return (
-    <nav className="navbar navbar-expand-lg bg-transparent border-bottom border-light position-fixed top-0">
+    <nav className="navbar navbar-expand-xl border-bottom border-light position-fixed top-0">
       <div className="container-fluid">
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -16,10 +16,10 @@ function Navbar() {
             <Link className="navbar-brand" to="/">hela</Link>
           </div>
           <div className="navbar-nav">
-            <Link className="hela-nav-link" activeClass="active" to="home" spy={true} smooth={true} duration={500} >HOME</Link>
-            <Link className="hela-nav-link" activeClass="active" to="about" spy={true} smooth={true} duration={500} >ABOUT</Link>
-            <Link className="hela-nav-link" activeClass="active" to="blog" spy={true} smooth={true} duration={500} >BLOG</Link>
-            <Link className="hela-nav-link" activeClass="active" to="events" spy={true} smooth={true} duration={500} >EVENTS</Link>
+            <Link className="hela-nav-link" activeClass="active" to="home" spy={true} hashSpy={true} smooth={true} duration={500} href="/#home">HOME</Link>
+            <Link className="hela-nav-link" activeClass="active" to="about" spy={true} hashSpy={true} smooth={true} duration={500} href="/#about">ABOUT</Link>
+            <Link className="hela-nav-link" activeClass="active" to="blog" spy={true} hashSpy={true} smooth={true} duration={500} href="/#blog">BLOG</Link>
+            <Link className="hela-nav-link" activeClass="active" to="events" spy={true} hashSpy={true} smooth={true} duration={500} href="/#events">EVENTS</Link>
             <NavLink className={getClass} to="/discover">DISCOVER</NavLink>
           </div>
         </div>

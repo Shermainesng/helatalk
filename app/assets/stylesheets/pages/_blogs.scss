@@ -1,9 +1,11 @@
 .scrolling-panel {
-  height: 600px;
+  height: auto;
   overflow-x: scroll;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .category-card {
   min-width: 400px;
+
   img {
     height: 300px;
     width: 100%;
