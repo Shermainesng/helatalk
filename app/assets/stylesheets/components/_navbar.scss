@@ -2,11 +2,12 @@
   width: 100%;
   background: url(backgroundgradient.jpg);
 }
-.navbar-brand {
+
+.brand-logo .navbar-brand {
   font-family: $loud-font;
   font-style: italic;
   color: $hela-blue;
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 
 .hela-nav-link {
@@ -23,4 +24,7 @@
 
 .hela-nav-link.active {
   color: $hela-blue;
+}
+.navbar .hela-navbar-cats {
+  flex-grow: 0;
 }

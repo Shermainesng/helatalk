@@ -3,6 +3,7 @@ import Page from "./Page";
 import Container from "./Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Home() {
   const title = "Home";
@@ -13,8 +14,10 @@ function Home() {
         <h2 className="font-white font-headers">Your Daily Dose of Sex Positivity</h2>
         <h3 className="font-white font-body">Join the Community</h3>
         <div className="position-absolute fixed-bottom pb-5">
-          <FontAwesomeIcon className="triangle-down" icon={faCaretDown} />
-          <p className="font-white-p">read more</p>
+          <Link to="/about">
+            <FontAwesomeIcon className="triangle-down" icon={faCaretDown} />
+            <p className="font-white-p">read more</p>
+          </Link>
         </div>
       </Container>
     </Page>
