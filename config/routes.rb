@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get '/events', to: 'pages#home'
 
   resources :emails, only: [:new, :create]
+
+  namespace :api do
+    get 'articles/:category', to: 'articles#index'
+  end
 end

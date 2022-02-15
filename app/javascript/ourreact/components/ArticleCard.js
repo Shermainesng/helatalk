@@ -4,7 +4,7 @@ function ArticleCard(props) {
   const { publisher, title, author, url } = props.article;
   return (
     <div className="my-4 card-rounded translucent-dark font-white">
-      <a className="text-decoration-none" href="https://badgirlsbible.com/vaginal-orgasm">
+      <a className="text-decoration-none" href={url}>
         <div className="card-header">
           {publisher}
         </div>
