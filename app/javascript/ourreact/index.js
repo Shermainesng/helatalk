@@ -4,8 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 
-
-
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -25,15 +23,14 @@ import Discover from "./components/Discover";
 
 function App() {
   return (
-  <div>
-    <Home />
-    <About />
-    <Blogs />
-    <Events />
-  </div>
+    <div>
+      <Home />
+      <About />
+      <Blogs />
+      <Events />
+    </div>
   );
 }
-
 
 function Main() {
   return (
