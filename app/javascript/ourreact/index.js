@@ -5,8 +5,6 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 // import { Link } from 'react-scroll'
 
-
-
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -26,20 +24,19 @@ import Discover from "./components/Discover";
 
 function App() {
   return (
-  <div>
-    <Home />
-    <About />
-    <Blogs />
-    <Events />
-  </div>
+    <div>
+      <Home />
+      <About />
+      <Blogs />
+      <Events />
+    </div>
   );
 }
 
-
 function Main() {
-//   function scrollToId(id) {
-//     document.getElementById(id).scrollIntoView();
-//   }
+  //   function scrollToId(id) {
+  //     document.getElementById(id).scrollIntoView();
+  //   }
 
   return (
     // <Provider>
