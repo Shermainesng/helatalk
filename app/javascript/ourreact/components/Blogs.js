@@ -8,17 +8,17 @@ function Blogs() {
 
   return (
     <Page id="blog" title={title} classes="vh-100">
-      <h2>{title}</h2>
-      <Container classes="scrolling-panel">
+      <h2 className="text-center font-headers font-white mb-2">{title}</h2>
+      <h2 className="text-center font-body font-white mb-4"> just some articles and resources that you'll find useful</h2>
+      <div className="scrolling-panel py-5">
         <div className="d-flex flex-row">
-        <CategoryCard name="Health" />
-        <CategoryCard name="Kink" />
-        <CategoryCard name="Mental" />
-        <CategoryCard name="Explore" />
-        <CategoryCard name="Others" />
+          <CategoryCard name="Health" />
+          <CategoryCard name="Kink" />
+          <CategoryCard name="Mental" />
+          <CategoryCard name="Explore" />
+          <CategoryCard name="Others" />
         </div>
-
-      </Container>
+      </div>
 
     </Page>
   );

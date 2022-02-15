@@ -16,13 +16,11 @@ function Events() {
   return (
     <Page id="events" title={title} classes="d-flex align-items-center py-5 vh-100">
       <Container classes="text-center">
-        <h1 className="font-white-h2">{title}</h1>
-        <h2 className="font-white-h2">We're planning some exciting stuff</h2>
-        <h3 className="font-white-h3">Get notified!</h3>
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <input type="text"></input>
-          </fieldset>
+        <h1 className="font-headers font-white">{title}</h1>
+        <h2 className="font-white font-body">We're planning some exciting stuff</h2>
+        <form onSubmit={handleSubmit} className="w-50 m-auto">
+          <input type="text" placholder="your email here" className="form-control my-2"></input>
+          <input type="submit" value="Get notified!" className="btn btn-secondary w-100"/>
         </form>
       </Container>
     </Page>
