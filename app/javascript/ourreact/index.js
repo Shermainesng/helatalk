@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
+import BlogCategory from "./components/BlogCategory";
 import Events from "./components/Events";
 import Discover from "./components/Discover";
 
@@ -49,6 +50,7 @@ function Main() {
         {/* pass the state as props to header to ensure header can still render properly */}
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="blog/:category" element={<BlogCategory />} />
           {/* <Route path="#about" element={<App />}/>
           <Route path="#blog" element={<App />}/> */}
           {/* <Route path="/events" element={<App />} onEnter={scrollToId("events")} /> */}
