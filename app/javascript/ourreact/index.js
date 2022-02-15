@@ -22,28 +22,28 @@ import Header from "./components/Header";
 // // const middlewares = composeEnhancers(applyMiddleware(reduxPromise));
 // // store={createStore(reducers, {}, middlewares)}
 
-// function App() {
-//   return (
-//     <div>
-//       <Home />
-//       <About />
-//       <Blogs />
-//       <Events />
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <div>
+      <Home />
+      <About />
+      <Blogs />
+      <Events />
+    </div>
+  );
+}
 
 function Main() {
   return (
     // <Provider>
     <BrowserRouter>
       <div className="container-background">
-        {/* <Navbar /> */}
-        <Header />
+        <Navbar />
+        {/* <Header /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<App />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blogs />} />
+          <Route path="/#blog" element={<Blogs />} />
           <Route path="blog/:category" element={<BlogCategory />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/events" element={<Events />} />

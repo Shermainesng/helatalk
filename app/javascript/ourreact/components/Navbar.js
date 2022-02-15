@@ -7,7 +7,7 @@ function Navbar() {
     return isActive ? "hela-nav-link active" : "hela-nav-link";
   };
   return (
-    <nav className="navbar navbar-expand-xl border-bottom border-light position-fixed top-0">
+    <nav className="navbar navbar-expand-xl border-bottom border-light fixed-top px-5 py-3">
       <div className="container-fluid">
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <div>
+              <div className="brand-logo">
                 <Link className="navbar-brand" to="/">
                   hela
                 </Link>
