@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware } from "redux";
-// import { Link } from 'react-scroll'
 
 
 
@@ -37,10 +36,6 @@ function App() {
 
 
 function Main() {
-//   function scrollToId(id) {
-//     document.getElementById(id).scrollIntoView();
-//   }
-
   return (
     // <Provider>
     <BrowserRouter>

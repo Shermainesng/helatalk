@@ -7,8 +7,9 @@ function Home() {
   return (
     <Page id="home" title={title} classes="d-flex align-items-center vh-100">
       <Container classes="text-center">
-        <h1 className="font-white-h1">Your Daily Dose of Sex Positivity</h1>
-        <h3 className="font-white-h3">Join the Community</h3>
+        <h1 className="d-none">hela | your daily dose of sex positivity sex positivity</h1>
+        <h2 className="font-white font-headers">Your Daily Dose of Sex Positivity</h2>
+        <h3 className="font-white font-body">Join the Community</h3>
         <div className="fixed-bottom">
           <i className="triangle-down"></i>
           <p className="font-white-p">read more</p>
