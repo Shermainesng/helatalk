@@ -1,5 +1,6 @@
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
 // Define fonts for body and headers
 $body-font: "Roboto", "sans-serif";
 $headers-font: "Roboto", "sans-serif";
@@ -21,19 +22,33 @@ $loud-font: "Anton", "sans-serif";
   text-transform: lowercase;
 }
 
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 .font-white {
   color: #FFFFFF;
 
-  a, a:hover {
+  a {
     color: #FFFFFF;
   }
 }
 
+.font-black {
+  color: #000000;
+
+  a, a:hover {
+    color: #000000;
+  }
+}
+
+// roboto
 .font-headers {
   font-weight: 300;
   letter-spacing: 8px;
 }
 
+//roboto
 .font-body {
   font-size: 25px;
   font-weight: 200;
