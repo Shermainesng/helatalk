@@ -11,6 +11,7 @@ import Blogs from "./components/Blogs";
 import BlogCategory from "./components/BlogCategory";
 import Events from "./components/Events";
 import Discover from "./components/Discover";
+import Header from "./components/Header";
 
 // Reducers
 
@@ -33,6 +34,7 @@ function App() {
 
 function Main() {
   return (
+
     // <Provider store={createStore(reducers)}>
       <BrowserRouter>
         {/* <FlashMessages messages={state.flashMessages} /> */}
