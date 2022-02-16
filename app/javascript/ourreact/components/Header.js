@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-// import { navLink } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between px-5 py-3 border-bottom border-light fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between px-5 py-3 border-bottom border-light sticky-top">
       <div className="brand-logo">
         <Link className="navbar-brand" to="/">
           hela
@@ -22,10 +21,9 @@ function Header() {
             </Link>
           </li>
           <li className="nav-item">
-            {/* <Link className="hela-nav-link" to="/about"> */}
-            <Link className="hela-nav-link" to="/about" spy={true} hashSpy={true} smooth={true} duration={500}></Link>
-            ABOUT
-            {/* </Link> */}
+            <Link className="hela-nav-link" to="/about">
+              ABOUT
+            </Link>
           </li>
           <li className="nav-item">
             <Link className="hela-nav-link" to="/blogs">
