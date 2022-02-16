@@ -8,19 +8,19 @@ import ArticleCard from "./ArticleCard";
 function BlogCategory(props) {
   const params = useParams();
   const [category, setCategory] = useState(params.category.toLowerCase());
-  const [articles, setArticles] = useState([]);
+  // useEffect(()=> {
+  //   setCategory(params.category.toLowerCase())
+  // }, []);
   const categories = ["sexuality", "mental health", "sexual health", "self-pleasure"];
 
+  const [articles, setArticles] = useState([]);
   useEffect(() => {
-    // console.log(`/api/articles/${category.toLowerCase()}`);
-    // Make a request for a user with a given ID
+    console.log(`fetching articles on: ${category.toLowerCase()}`);
     axios.get(`/api/articles/${category}`)
       .then(function (response) {
-        // console.log(response.data);
         setArticles(response.data);
       })
       .catch(function (error) {
-        // handle error
         console.log(error);
       });
   }, []);
