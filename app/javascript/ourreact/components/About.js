@@ -13,7 +13,7 @@ function About() {
         </div>
       </div>
 
-      <div className="container-about-white">
+      <div className="container-about-white py-5">
         <h2 className="font-white font-headers our-team text-center">the team</h2>
         <div className="intro-cards container w-75">
           <div className="d-flex flex-row">
@@ -28,12 +28,12 @@ function About() {
             </div>
           </div>
           <div className="d-flex flex-row justify-content-between">
-            <h3>"Hello"</h3>
+            <h3></h3>
             <div className="col-4 my-4 card font-poppins font-black card-shadow w-30">
               <div className="text-decoration-none">
                 <div className="card-body">
-                  <p className="mb-0">she/her, 24</p>
-                  <p className="fs-3">sherms</p>
+                  <p className="mb-0">she/her, 21</p>
+                  <p className="fs-3">ang</p>
                   <footer className="blockquote-footer">hello</footer>
                 </div>
               </div>

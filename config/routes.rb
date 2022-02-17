@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/about', to: 'pages#home'
-  get '/blog', to: 'pages#home'
-  get '/blog/:category', to: 'pages#home'
+  get '/blogs', to: 'pages#home'
+  get '/blogs/:category', to: 'pages#home'
 
   get '/discover', to: 'pages#home'
   get '/events', to: 'pages#home'
