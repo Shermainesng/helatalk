@@ -6,52 +6,37 @@ import Page from "./Page";
 import ArticleCard from "./ArticleCard";
 
 function BlogCategory() {
-  const params = useParams();
-  const [category, setCategory] = useState(params.category.toLowerCase());
+  const { category } = useParams();
+  const [cat, setCategory] = useState(category);
   const categories = ["sexuality", "mental health", "sexual health", "self-pleasure"];
   const [articles, setArticles] = useState([]);
 
+  useEffect(() => {
+    const api_key = "8dec3990bf234643b97d478782c39c42";
+    var url = `https://newsapi.org/v2/everything?q=${cat}&from=2022-02-17&sortBy=popularity&apiKey=${api_key}`;
+    var req = new Request(url);
+    fetch(req).then(function (response) {
+      console.log(response.json());
+      console.log(`fetching articles on: ${cat}`);
+      // setArticles(response.data);
+    });
+  }, [cat]);
   // useEffect(() => {
-  //   console.log(`fetching articles on: ${category.toLowerCase()}`);
-  //   axios
-  //     .get(`/api/articles/${category}`)
-  //     .then(function (response) {
-  //       setArticles(response.data);
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
+  //   async function fetchArticles() {
+  //     try {
+  //       const response = await Axios.get(`https://newsapi.org/v2/everything?q=${category}&from=2022-02-17&sortBy=popularity&apiKey=${api_key}`);
+  //       console.log(response.data);
+  //       console.log(`fetching articles on: ${category}`);
+  //       setArticles(response.data); //set the array of posts as the posts variable
+  //     } catch (e) {
+  //       console.log("there was a problem");
+  //     }
+  //   }
+  //   fetchArticles();
   // }, []);
 
-  useEffect(() => {
-    async function fetchArticles() {
-      try {
-        const response = await Axios.get(`/api/articles/${category}`);
-        console.log(response.data);
-        console.log(`fetching articles on: ${category.toLowerCase()}`);
-        setArticles(response.data); //set the array of posts as the posts variable
-      } catch (e) {
-        console.log("there was a problem");
-      }
-    }
-    fetchArticles();
-  }, []);
-
   function handleClick(e) {
-    setCategory(e.target.value);
-    useEffect(() => {
-      async function fetchArticlesAgain() {
-        try {
-          const response = await Axios.get(`/api/articles/${category}`);
-          console.log(response.data);
-          console.log(`fetching articles on: ${category.toLowerCase()}`);
-          setArticles(response.data); //set the array of posts as the posts variable
-        } catch (e) {
-          console.log("there was a problem");
-        }
-      }
-      fetchArticlesAgain();
-    }, [{ category }]);
+    setCategory(e.target.outerText);
   }
 
   return (
@@ -60,11 +45,11 @@ function BlogCategory() {
       <h2 className="font-poppins font-body font-white text-center">articles and resources we love</h2>
       <div className="wh-100 linear-gradient p-4">
         <ul className="nav font-white font-poppins">
-          {categories.map((category, index) => {
+          {categories.map((c, index) => {
             return (
               <li className="nav-item">
-                <NavLink onClick={handleClick} className={({ isActive }) => (isActive ? "hela-nav-link active" : "hela-nav-link")} to={`/blog/${category.replace(/\W/, "")}`} key={index}>
-                  {category}
+                <NavLink onClick={handleClick} className={({ isActive }) => (isActive ? "hela-nav-link active" : "hela-nav-link")} to={`/blog/${c.replace(/\W/, "")}`} key={index}>
+                  {c}
                 </NavLink>
               </li>
             );

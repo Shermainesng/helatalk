@@ -42,7 +42,7 @@ function Main() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="blog/:category" element={<BlogCategory />} />
+        <Route path="/blog/:category" element={<BlogCategory />} />
         {/* <Route path="/events" element={<App />} onEnter={scrollToId("events")} /> */}
         <Route path="/events" element={<Events />} />
         <Route path="/discover" element={<Discover />} />

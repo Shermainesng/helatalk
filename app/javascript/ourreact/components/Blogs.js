@@ -4,7 +4,7 @@ import Container from "./Container";
 import CategoryCard from "./CategoryCard";
 
 function Blogs() {
-  const title = "blog"
+  const title = "blog";
 
   return (
     <Page id="blog" title={title} classes="vh-100">
@@ -13,12 +13,11 @@ function Blogs() {
       <div className="scrolling-panel py-5">
         <div className="d-flex flex-row">
           <CategoryCard name="sexuality" />
-          <CategoryCard name="mental health" />
-          <CategoryCard name="sexual health" />
+          <CategoryCard name="mentalhealth" />
+          <CategoryCard name="sexualhealth" />
           <CategoryCard name="self-pleasure" />
         </div>
       </div>
-
     </Page>
   );
 }
