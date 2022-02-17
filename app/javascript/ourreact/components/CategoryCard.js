@@ -9,7 +9,7 @@ function CategoryCard(props) {
         <img src={props.img} className="card-img-top category-img" alt="..." />
         <div className="card-body text-center">
           <h5 className="card-title font-anton font-white">{props.name}</h5>
-          <p className="card-text font-white px-5">{props.description}</p>
+          <p className="card-text font-white">{props.description}</p>
         </div>
       </Link>
       <Outlet />

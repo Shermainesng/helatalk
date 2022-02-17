@@ -3,13 +3,23 @@
   overflow-x: scroll;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .category-card {
-  min-width: 400px;
+  min-width: 337px;
+  padding: 14px 14px;
+  margin: 0px 10px;
+  border-radius: 7px;
+
+  &:hover {
+    box-shadow: 2px 2px 8px #b5d9ff;
+    transition: 100ms;
+  }
 
   img {
-    height: 300px;
+    height: 371px;
+    border-radius: 7px;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 
