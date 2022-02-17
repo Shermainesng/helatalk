@@ -1,15 +1,16 @@
 import React from "react";
 import Page from "./Page";
+import Container from "./Container";
 
 function Discover() {
   const title = "Discover"
 
   return (
-    <Page title={title}>
-      <h2>About Us!</h2>
-      <p className="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorum labore quisquam vel id dicta fuga! Ducimus, quo. Dolore commodi aliquid error veritatis consequuntur, excepturi cumque fuga eum incidunt doloremque?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At qui enim rem totam voluptatum. Aut saepe temporibus, facilis ex a iste expedita minima dolorum dicta doloribus libero aliquid, quae maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat suscipit beatae eum, est soluta ducimus ratione et impedit sapiente, nihil, atque dignissimos adipisci? Totam atque officia quis voluptates sed veniam?</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates quisquam possimus tenetur, dicta enim rerum quis, quaerat id nobis provident quo dolorum sapiente temporibus facere non repellendus consequatur cupiditate!</p>
+    <Page id="discover" title={title} classes="d-flex align-items-center py-5 vh-100 container-background">
+      <Container classes="text-center">
+        <h1 className="font-headers font-white mb-1">watch this page!</h1>
+        <h2 className="font-white font-body mb-4">we've got something cool for you</h2>
+      </Container>
     </Page>
   );
 }

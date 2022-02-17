@@ -16,8 +16,7 @@
 .linear-gradient {
   position: relative;
   top: 40px;
-
-  min-height: 50%;
-
+  min-height: 75%;
+  border-radius: 8px;
   background: linear-gradient(180deg, #FF7163 18.23%, rgba(45, 23, 154, 0.6) 99.98%);
 }

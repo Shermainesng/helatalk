@@ -1,47 +1,46 @@
-//scroll-react navbar for homepage
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
-  const getClass = ({ isActive }) => {
-    return isActive ? "hela-nav-link active" : "hela-nav-link";
-  };
   return (
-    <nav className="navbar navbar-expand-xl border-bottom border-light position-sticky top-0">
-      <div className="container-fluid">
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between px-5 py-3 border-bottom border-light sticky-top">
+      <div className="brand-logo">
+        <Link className="navbar-brand" to="/">
+          hela
+        </Link>
+      </div>
 
-        <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <div className="brand-logo">
-                <Link className="navbar-brand" to="/">
-                  hela
-                </Link>
-              </div>
-            </li>
-          </ul>
-          <div className="navbar-nav">
-            <Link className="hela-nav-link" activeclass="active" to="home" spy={true} hashSpy={true} smooth={true} duration={500} href="/#home">
-              HOME
-            </Link>
-            <Link className="hela-nav-link" activeclass="active" to="about" spy={true} hashSpy={true} smooth={true} duration={500} href="/#about">
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse hela-navbar-cats" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item active">
+            <NavLink className={({ isActive }) => (isActive ? "hela-nav-link active" : "hela-nav-link")} to="/">
+              HOME <span className="sr-only">(current)</span>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className={({ isActive }) => (isActive ? "hela-nav-link active" : "hela-nav-link")} to="/about">
               ABOUT
-            </Link>
-            <Link className="hela-nav-link" activeclass="active" to="blog" spy={true} hashSpy={true} smooth={true} duration={500} href="/#blog">
-              BLOG
-            </Link>
-            <Link className="hela-nav-link" activeclass="active" to="events" spy={true} hashSpy={true} smooth={true} duration={500} href="/#events">
-              EVENTS
-            </Link>
-            <NavLink className={getClass} to="/discover">
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className={({ isActive }) => (isActive ? "hela-nav-link active" : "hela-nav-link")} to="/blogs">
+              BLOGS
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className={({ isActive }) => (isActive ? "hela-nav-link active" : "hela-nav-link")} to="/discover">
               DISCOVER
             </NavLink>
-          </div>
-        </div>
+          </li>
+          <li className="nav-item">
+            <NavLink className={({ isActive }) => (isActive ? "hela-nav-link active" : "hela-nav-link")} to="/events">
+              EVENTS
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </nav>
   );

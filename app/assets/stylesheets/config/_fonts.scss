@@ -16,12 +16,6 @@ $loud-font: "Anton", "sans-serif";
 // }
 // $my-font: "Font Name";
 
-.font-anton {
-  font-family: $loud-font;
-  font-style: italic;
-  text-transform: lowercase;
-}
-
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
@@ -43,11 +37,14 @@ $loud-font: "Anton", "sans-serif";
   }
 }
 
+
 // roboto
 .font-headers {
   font-weight: 300;
-  letter-spacing: 8px;
+  letter-spacing: 2px;
   font-family: $loud-font;
+  font-style: italic;
+  text-transform: lowercase;
 }
 .our-team {
   color: black;
