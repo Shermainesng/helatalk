@@ -3,8 +3,9 @@ class Api::ArticlesController < ApplicationController
 
   def index
     skip_policy_scope
-    category = params[:category]
-    @articles = Article.where(category: category)
+    cat = params[:category]
+    category = Category.where(name: cat)
+    @articles = category.first.articles
 
     render json: @articles
   end
