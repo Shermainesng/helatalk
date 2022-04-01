@@ -1,9 +1,12 @@
 .container-background {
   background: url(backgroundgradient.jpg);
-  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.row-custom {
+  height: 100vh;
 }
 
 .triangle-down {

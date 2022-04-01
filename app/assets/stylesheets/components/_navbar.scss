@@ -1,6 +1,13 @@
 .navbar {
   width: 100%;
-  background: url(backgroundgradient.jpg);
+  background-color: white;
+  border: 1px solid black;
+  border-bottom: 5px solid #1143f8;
+  // opacity: 0.9;
+}
+
+.navbar .navbar-cats-custom {
+  flex-grow: 0;
 }
 
 .brand-logo .navbar-brand {
@@ -15,19 +22,16 @@
 }
 
 .hela-nav-link {
-  color: $hela-white;
+  color: $hela-blue;
   text-decoration: none;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 
   &:hover {
-    color: $hela-blue;
+    color: #ff7163;
   }
 }
 
 .hela-nav-link.active {
   color: $hela-blue;
-}
-.navbar .hela-navbar-cats {
-  flex-grow: 0;
 }
