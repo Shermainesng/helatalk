@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, NavLink, Outlet} from "react-router-dom";
+import { useParams, NavLink, Outlet } from "react-router-dom";
 import Axios from "axios";
 
 import Page from "./Page";
@@ -25,7 +25,7 @@ function BlogCategory() {
     fetchArticles();
     console.log("articles fetched:");
     console.log(articles);
-  },[category])
+  }, [category]);
 
   return (
     <Page id={category} title={category} classes="p-4 vh-100 container-background">
@@ -42,7 +42,7 @@ function BlogCategory() {
               </li>
             );
           })}
-          <Outlet/>
+          <Outlet />
         </ul>
         <div className="p-2">
           {articles.map(article => (
